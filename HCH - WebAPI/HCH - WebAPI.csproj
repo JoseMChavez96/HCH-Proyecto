@@ -45,10 +45,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -155,11 +162,26 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CARRITOController.cs" />
+    <Compile Include="Controllers\CATEGORIAController.cs" />
+    <Compile Include="Controllers\COMPRAController.cs" />
+    <Compile Include="Controllers\DETALLE_COMPRAController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MARCAController.cs" />
+    <Compile Include="Controllers\PRODUCTOController.cs" />
+    <Compile Include="Controllers\USUARIOController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CARRITO.cs" />
+    <Compile Include="Models\CATEGORIA.cs" />
+    <Compile Include="Models\COMPRA.cs" />
+    <Compile Include="Models\DETALLE_COMPRA.cs" />
+    <Compile Include="Models\MARCA.cs" />
+    <Compile Include="Models\Modelo_HCH.cs" />
+    <Compile Include="Models\PRODUCTO.cs" />
+    <Compile Include="Models\USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,10 +234,44 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\CARRITO\Create.cshtml" />
+    <Content Include="Views\CARRITO\Delete.cshtml" />
+    <Content Include="Views\CARRITO\Details.cshtml" />
+    <Content Include="Views\CARRITO\Edit.cshtml" />
+    <Content Include="Views\CARRITO\Index.cshtml" />
+    <Content Include="Views\CATEGORIAs\Create.cshtml" />
+    <Content Include="Views\CATEGORIAs\Delete.cshtml" />
+    <Content Include="Views\CATEGORIAs\Details.cshtml" />
+    <Content Include="Views\CATEGORIAs\Edit.cshtml" />
+    <Content Include="Views\CATEGORIAs\Index.cshtml" />
+    <Content Include="Views\COMPRA\Create.cshtml" />
+    <Content Include="Views\COMPRA\Delete.cshtml" />
+    <Content Include="Views\COMPRA\Details.cshtml" />
+    <Content Include="Views\COMPRA\Edit.cshtml" />
+    <Content Include="Views\COMPRA\Index.cshtml" />
+    <Content Include="Views\DETALLE_COMPRA\Create.cshtml" />
+    <Content Include="Views\DETALLE_COMPRA\Delete.cshtml" />
+    <Content Include="Views\DETALLE_COMPRA\Details.cshtml" />
+    <Content Include="Views\DETALLE_COMPRA\Edit.cshtml" />
+    <Content Include="Views\DETALLE_COMPRA\Index.cshtml" />
+    <Content Include="Views\MARCA\Create.cshtml" />
+    <Content Include="Views\MARCA\Delete.cshtml" />
+    <Content Include="Views\MARCA\Details.cshtml" />
+    <Content Include="Views\MARCA\Edit.cshtml" />
+    <Content Include="Views\MARCA\Index.cshtml" />
+    <Content Include="Views\PRODUCTO\Create.cshtml" />
+    <Content Include="Views\PRODUCTO\Delete.cshtml" />
+    <Content Include="Views\PRODUCTO\Details.cshtml" />
+    <Content Include="Views\PRODUCTO\Edit.cshtml" />
+    <Content Include="Views\PRODUCTO\Index.cshtml" />
+    <Content Include="Views\USUARIO\Create.cshtml" />
+    <Content Include="Views\USUARIO\Delete.cshtml" />
+    <Content Include="Views\USUARIO\Details.cshtml" />
+    <Content Include="Views\USUARIO\Edit.cshtml" />
+    <Content Include="Views\USUARIO\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
