@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="600d1082-9496-48cd-87dd-6fea59a6f03e"
+    Name="2c61921f-dbd8-430b-b67d-c98bb8268b00"
     Publisher="CN=GamingR3.4"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="600d1082-9496-48cd-87dd-6fea59a6f03e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="2c61921f-dbd8-430b-b67d-c98bb8268b00" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>HCH - UWP v1</DisplayName>
@@ -45,8 +45,5 @@
 
   <Capabilities>
     <Capability Name="internetClient" />
-    <Capability Name="internetClientServer"/>
-    <Capability Name="privateNetworkClientServer"/>
-    <uap:Capability Name="sharedUserCertificates"/>
   </Capabilities>
 </Package>

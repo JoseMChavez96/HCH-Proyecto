@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{E1CB1158-C675-4B99-A068-E5B49A2319AA}</ProjectGuid>
+    <ProjectGuid>{89A0D175-2A2D-4436-8F53-5BEA02356F81}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HCH___UWP_v1</RootNamespace>
@@ -119,13 +119,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\CARRITO.cs" />
-    <Compile Include="Classes\CATEGORIA.cs" />
-    <Compile Include="Classes\PRODUCTO.cs" />
-    <Compile Include="Classes\DETALLE_COMPRA.cs" />
-    <Compile Include="Classes\COMPRA.cs" />
-    <Compile Include="Classes\MARCA.cs" />
-    <Compile Include="Classes\USUARIO.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
