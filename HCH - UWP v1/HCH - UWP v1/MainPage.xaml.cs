@@ -26,35 +26,30 @@ namespace HCH___UWP_v1
         {
             this.InitializeComponent();
         }
-        /*
-        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ProductoPantalla));
-        }
-        */
+        
         private void CarritoFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(CarritoPantalla));
         }
 
         private void CategoriaFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(CategoriaPantalla));
         }
 
         private void CompraFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(CompraPantalla));
         }
 
         private void DetalleCompraFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(DetalleCompraPantalla));
         }
 
         private void MarcaFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(MarcaPantalla));
         }
 
         private void ProductoFO_Click(object sender, RoutedEventArgs e)
@@ -64,7 +59,7 @@ namespace HCH___UWP_v1
 
         private void UsuarioFO_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
+            this.Frame.Navigate(typeof(UsuarioPantalla));
         }
 
     }

@@ -119,6 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CarritoPantalla.xaml.cs">
+      <DependentUpon>CarritoPantalla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriaPantalla.xaml.cs">
+      <DependentUpon>CategoriaPantalla.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\CARRITO.cs" />
     <Compile Include="Classes\CATEGORIA.cs" />
     <Compile Include="Classes\COMPRA.cs" />
@@ -126,13 +132,25 @@
     <Compile Include="Classes\MARCA.cs" />
     <Compile Include="Classes\PRODUCTO.cs" />
     <Compile Include="Classes\USUARIO.cs" />
+    <Compile Include="CompraPantalla.xaml.cs">
+      <DependentUpon>CompraPantalla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleCompraPantalla.xaml.cs">
+      <DependentUpon>DetalleCompraPantalla.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaPantalla.xaml.cs">
+      <DependentUpon>MarcaPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProductoPantalla.xaml.cs">
       <DependentUpon>ProductoPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioPantalla.xaml.cs">
+      <DependentUpon>UsuarioPantalla.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -154,11 +172,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CarritoPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoriaPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompraPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetalleCompraPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MarcaPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProductoPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsuarioPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
