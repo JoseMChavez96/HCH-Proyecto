@@ -361,6 +361,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-
-# Project reference - Web API's Web.config file, to allow different SQL server names between collaborators
-/HCH\ -\ WebApi\ v2/HCH\ -\ WebApi\ v2/Web.config

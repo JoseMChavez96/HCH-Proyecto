@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,25 +14,28 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// To learn more about WinUI, the WinUI project structure,
+// and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace HCH___UWP_v1
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class ProductoPantalla : Page
     {
-        public MainPage()
+        public ProductoPantalla()
         {
             this.InitializeComponent();
         }
-        /*
-        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
+
+        
+
+        private void MainPageFO_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ProductoPantalla));
+            this.Frame.Navigate(typeof(MainPage));
         }
-        */
+
         private void CarritoFO_Click(object sender, RoutedEventArgs e)
         {
             //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
@@ -57,15 +61,9 @@ namespace HCH___UWP_v1
             //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
         }
 
-        private void ProductoFO_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ProductoPantalla));
-        }
-
-        private void UsuarioFO_Click(object sender, RoutedEventArgs e)
+         private void UsuarioFO_Click(object sender, RoutedEventArgs e)
         {
             //this.Frame.Navigate(typeof( -- PANTALLA DE ITEM -- ));
         }
-
     }
 }
