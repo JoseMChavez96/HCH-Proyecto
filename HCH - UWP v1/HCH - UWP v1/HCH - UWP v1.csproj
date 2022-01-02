@@ -156,7 +156,7 @@
     <Compile Include="MARCA\MarcaPantalla.xaml.cs">
       <DependentUpon>MarcaPantalla.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProductoPantalla.xaml.cs">
+    <Compile Include="PRODUCTO1\ProductoPantalla.xaml.cs">
       <DependentUpon>ProductoPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -225,7 +225,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProductoPantalla.xaml">
+    <Page Include="PRODUCTO1\ProductoPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -242,9 +242,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PRODUCTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

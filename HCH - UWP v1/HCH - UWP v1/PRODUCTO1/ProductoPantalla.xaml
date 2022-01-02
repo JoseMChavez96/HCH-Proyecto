@@ -28,7 +28,6 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="15,96,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="99"/>
-        <Button Content="Llamar Api" Margin="750,889,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
         <ListView x:Name="ListaProducto" Margin="107,10,-107,132">
             <ListView.HeaderTemplate>
                 <DataTemplate>
