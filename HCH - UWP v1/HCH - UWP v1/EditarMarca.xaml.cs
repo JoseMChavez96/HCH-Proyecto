@@ -16,12 +16,14 @@ namespace HCH___UWP_v1
     /// </summary>
     public sealed partial class EditarMarca : Page
     {
-        private MARCA marca = new MARCA();
+        private MARCA marca;
         public EditarMarca()
         {
             this.InitializeComponent();
         }
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             marca = e.Parameter as MARCA;
 
@@ -31,7 +33,7 @@ namespace HCH___UWP_v1
         private async void AppBarButton_Click(object  sender, RoutedEventArgs e)
         {
             var client = new HttpClient();
-            await client.DeleteAsync("https://localhost:44399/api/Marca/" + marca);
+            await client.DeleteAsync("https://localhost:44399/api/Marca/" + marca.IdMarca);
             Frame.GoBack();
         }
         private async void AppBarButton_Click_1(object sender, RoutedEventArgs e)
@@ -39,12 +41,12 @@ namespace HCH___UWP_v1
             var client = new HttpClient();
 
             marca.Descripcion = IDDescripcionTB.Text;
-
+            marca.PRODUCTO = null; 
             var MARCAJson = JsonConvert.SerializeObject(marca);
             var HttpContent = new StringContent(MARCAJson);
             HttpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json");
 
-           await client.PutAsync("https://localhost:44399/api/Marca/" + marca, HttpContent);
+           await client.PutAsync("https://localhost:44399/api/Marca/" + marca.IdMarca, HttpContent);
             Frame.GoBack();
         } 
     }
