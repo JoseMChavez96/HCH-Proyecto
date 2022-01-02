@@ -131,7 +131,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CarritoPantalla.xaml.cs">
+    <Compile Include="adicional\CarritoPantalla.xaml.cs">
       <DependentUpon>CarritoPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="CATEGORIA\CategoriaPantalla.xaml.cs">
@@ -144,10 +144,10 @@
     <Compile Include="Classes\MARCA.cs" />
     <Compile Include="Classes\PRODUCTO.cs" />
     <Compile Include="Classes\USUARIO.cs" />
-    <Compile Include="CompraPantalla.xaml.cs">
+    <Compile Include="adicional\CompraPantalla.xaml.cs">
       <DependentUpon>CompraPantalla.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DetalleCompraPantalla.xaml.cs">
+    <Compile Include="adicional\DetalleCompraPantalla.xaml.cs">
       <DependentUpon>DetalleCompraPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="CATEGORIA\EditarCategoria.xaml.cs">
@@ -207,7 +207,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CarritoPantalla.xaml">
+    <Page Include="adicional\CarritoPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,11 +215,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CompraPantalla.xaml">
+    <Page Include="adicional\CompraPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DetalleCompraPantalla.xaml">
+    <Page Include="adicional\DetalleCompraPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
