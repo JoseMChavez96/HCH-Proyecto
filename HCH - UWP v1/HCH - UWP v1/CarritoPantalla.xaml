@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HCH___UWP_v1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:HCH___UWP_v1.Classes"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -28,7 +28,28 @@
             </Button.Flyout>
 
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="184,41,0,0" Text="Carrito" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="40,136,0,0" Text="Carrito" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
+        <Button Content="Button" Margin="750,896,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <ListView x:Name="ListaCarrito" Margin="235,25,-235,117">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="IDCarrito" Width="  250                                  "/>
+                        <TextBlock Text="IDUsuario" Width="250"/>
+                        <TextBlock Text="IDProducto" Width="250"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local1:CARRITO">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="ItemIdCarrito" Width="250" Text="{x:Bind IdCarrito}"  />
+                        <TextBlock x:Name="ItemU" Width="250" Text="{x:Bind IdUsuario}"  />
+                        <TextBlock x:Name="ItemP" Width="250" Text="{x:Bind  IdProducto}"  />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Page>
