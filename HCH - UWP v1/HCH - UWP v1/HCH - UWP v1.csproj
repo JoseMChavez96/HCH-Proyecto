@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="USUARIO\AddUsuario.xaml.cs">
+      <DependentUpon>AddUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PRODUCTO1\EditarProducto.xaml.cs">
       <DependentUpon>EditarProducto.xaml</DependentUpon>
     </Compile>
@@ -166,7 +169,7 @@
       <DependentUpon>ProductoPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsuarioPantalla.xaml.cs">
+    <Compile Include="USUARIO\UsuarioPantalla.xaml.cs">
       <DependentUpon>UsuarioPantalla.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="USUARIO\AddUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PRODUCTO1\EditarProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,7 +250,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UsuarioPantalla.xaml">
+    <Page Include="USUARIO\UsuarioPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

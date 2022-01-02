@@ -84,10 +84,18 @@ namespace HCH___UWP_v1
                 ListaUsuario.ItemsSource = resultado;
             }
         }
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            var JsonReponse = await client.GetStringAsync("https://localhost:44399/api/Usuario");
+            var USUARIOResult = JsonConvert.DeserializeObject<List<USUARIO>>(JsonReponse);
+            ListaUsuario.ItemsSource = USUARIOResult;
+        }
+ 
 
-        //private void UsuarioFO_Click(object sender, RoutedEventArgs e)
-        //{
-        //    this.Frame.Navigate(typeof(UsuarioPantalla));
-        //}
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddUsuario));
+        }
     }
 }

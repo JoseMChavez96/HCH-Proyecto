@@ -23,9 +23,9 @@ namespace HCH___UWP_v1
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class AddProducto : Page
+    public sealed partial class AddUsuario : Page
     {
-        public AddProducto()
+        public AddUsuario()
         {
             this.InitializeComponent();
         }
@@ -35,25 +35,24 @@ namespace HCH___UWP_v1
         }
         private async void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
-            var producto = new PRODUCTO()
+            var usuario = new USUARIO
             {
-               // IdProducto = int.Parse(IDProductoTB.Text),
-                Nombre = IDNombreTB.Text,
-                Descripcion = IDDescripcionTB.Text,
-                Precio = (int)Double.Parse(IDPrecioTB.Text),
-                Stock = int.Parse(IDStockTB.Text),
+                // IdProducto = int.Parse(IDProductoTB.Text),
+                Nombres = IDNombreTB.Text,
+                Apellidos = IDApellidoTB.Text,
+                Correo = IDCorreoTB.Text,
+                Contrasena = IDContrasenaTB.Text,
                 Activo = true,
-                IdMarca = int.Parse(IDMarcaTB.Text),
-                  IdCategoria = int.Parse(IDCategoriaTB.Text),
+                EsAdministrador = false,
                 FechaRegistro = DateTime.Now
             };
             var client = new HttpClient();
-            var PRODUCTOJson = JsonConvert.SerializeObject(producto);
-            var HttpContent = new StringContent(PRODUCTOJson);
+            var USUARIOJson = JsonConvert.SerializeObject(usuario);
+            var HttpContent = new StringContent(USUARIOJson);
 
             HttpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json");
 
-            await client.PostAsync("https://localhost:44399/api/Producto", HttpContent);
+            await client.PostAsync("https://localhost:44399/api/usuario", HttpContent);
 
             Frame.GoBack();
 
