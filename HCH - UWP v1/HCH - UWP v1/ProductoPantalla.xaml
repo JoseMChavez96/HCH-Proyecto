@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HCH___UWP_v1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:HCH___UWP_v1.Classes"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -27,7 +27,39 @@
             </Button.Flyout>
 
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="184,41,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,96,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="99"/>
+        <Button Content="Llamar Api" Margin="750,889,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <ListView x:Name="ListaProducto" Margin="107,10,-107,132">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="ID" Width="  200                                  "/>
+                        <TextBlock Text="Nombre" Width="200"/>
+                        <TextBlock Text="Descripcion" Width="200"/>
+                        <TextBlock Text="IdMarca" Width="200"/>
+                        <TextBlock Text="IdCategoria" Width="200"/>
+                        <TextBlock Text="Stock" Width="200"/>
+                        <TextBlock Text="Activo" Width="200"/>
+                        <TextBlock Text="FechaRegistro" Width="200"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local1:PRODUCTO">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="ItemIdProducto" Width="200" Text="{x:Bind IdProducto}"  />
+                        <TextBlock x:Name="ItemNombre" Width="200" Text="{x:Bind Nombre}"  />
+                        <TextBlock x:Name="ItemDescripcion" Width="200" Text="{x:Bind  Descripcion}"  />
+                        <TextBlock x:Name="ItemIdMarca" Width="200" Text="{x:Bind IdMarca}" />
+                        <TextBlock x:Name="ItemIdCategoria" Width="200" Text="{x:Bind IdCategoria}" />
+                        <TextBlock x:Name="ItemStock" Width="200" Text="{x:Bind Stock}" />
+                        <TextBlock x:Name="ItemActivo" Width="200" Text="{x:Bind Activo}" />
+                        <TextBlock x:Name="ItemFechaRegistro" Width="200" Text="{x:Bind FechaRegistro}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
 
 
 
