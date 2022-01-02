@@ -28,22 +28,8 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="15,96,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="99"/>
-        <ListView x:Name="ListaProducto" Margin="107,10,-107,132">
-            <ListView.HeaderTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID" Width="  200                                  "/>
-                        <TextBlock Text="Nombre" Width="200"/>
-                        <TextBlock Text="Descripcion" Width="200"/>
-                        <TextBlock Text="IdMarca" Width="200"/>
-                        <TextBlock Text="IdCategoria" Width="200"/>
-                        <TextBlock Text="Stock" Width="200"/>
-                        <TextBlock Text="Activo" Width="200"/>
-                        <TextBlock Text="FechaRegistro" Width="200"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
+        <ListBox x:Name="ListaProducto" Margin="109,111,55,110">
+            <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="local1:PRODUCTO">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock x:Name="ItemIdProducto" Width="200" Text="{x:Bind IdProducto}"  />
@@ -56,8 +42,24 @@
                         <TextBlock x:Name="ItemFechaRegistro" Width="200" Text="{x:Bind FechaRegistro}" />
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListView HorizontalAlignment="Left" Height="51" Margin="109,60,0,0" VerticalAlignment="Top" Width="1802">
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBlock Text="ID" Width="  200                                  "/>
+                <TextBlock Text="Nombre" Width="200"/>
+                <TextBlock Text="Descripcion" Width="200"/>
+                <TextBlock Text="IdMarca" Width="200"/>
+                <TextBlock Text="IdCategoria" Width="200"/>
+                <TextBlock Text="Stock" Width="200"/>
+                <TextBlock Text="Activo" Width="200"/>
+                <TextBlock Text="FechaRegistro" Width="200"/>
+
+
+            </StackPanel>
         </ListView>
+
 
 
 
