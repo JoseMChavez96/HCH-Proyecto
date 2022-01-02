@@ -17,10 +17,7 @@
                 <MenuFlyout>
                     <MenuFlyoutItem x:Name="MainPageFO" Text="Regresar a menú principal" Click="MainPageFO_Click"/>
                     <MenuFlyoutSeparator/>
-                    <MenuFlyoutItem x:Name="CarritoFO" Text="Carrito" Click="CarritoFO_Click"/>
                     <MenuFlyoutItem x:Name="CategoriaFO" Text="Categoría" Click="CategoriaFO_Click"/>
-                    <MenuFlyoutItem x:Name="CompraFO" Text="Compra" Click="CompraFO_Click"/>
-                    <MenuFlyoutItem x:Name="DetalleCompraFO" Text="Detalle Compra" Click="DetalleCompraFO_Click"/>
                     <!--<MenuFlyoutItem x:Name="MarcaFO" Text="Marca" Click="MarcaFO_Click"/>-->
                     <MenuFlyoutItem x:Name="ProductoFO" Text="Producto" Click="ProductoFO_Click"/>
                     <MenuFlyoutItem x:Name="UsuarioFO" Text="Usuario" Click="UsuarioFO_Click"/>

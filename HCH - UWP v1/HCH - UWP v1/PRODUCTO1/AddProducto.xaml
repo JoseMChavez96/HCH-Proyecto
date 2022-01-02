@@ -10,7 +10,6 @@
 
     <Grid>
         <StackPanel>
-            <TextBox x:Name="IDProductoTB" PlaceholderText="ID" Margin="50"/>
             <TextBox x:Name="IDNombreTB"  PlaceholderText="Nombre" Margin="50"/>
             <TextBox x:Name="IDDescripcionTB" PlaceholderText="Descripcion" Margin="50"/>
             <TextBox x:Name="IDPrecioTB"  PlaceholderText="Precio" Margin="50"/>

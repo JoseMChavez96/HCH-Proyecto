@@ -37,7 +37,7 @@ namespace HCH___UWP_v1
         {
             var producto = new PRODUCTO()
             {
-                IdProducto = int.Parse(IDProductoTB.Text),
+               // IdProducto = int.Parse(IDProductoTB.Text),
                 Nombre = IDNombreTB.Text,
                 Descripcion = IDDescripcionTB.Text,
                 Precio = (int)Double.Parse(IDPrecioTB.Text),

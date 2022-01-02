@@ -29,7 +29,7 @@ namespace HCH___UWP_v1
         private PRODUCTO nombre;
         private PRODUCTO precio;
         private PRODUCTO stock;
-        private PRODUCTO marca;
+       // private PRODUCTO marca;
         public EditarProducto()
         {
             this.InitializeComponent();
@@ -40,13 +40,13 @@ namespace HCH___UWP_v1
             nombre = e.Parameter as PRODUCTO;
             precio = e.Parameter as PRODUCTO;
             stock = e.Parameter as PRODUCTO;
-            marca = e.Parameter as PRODUCTO;
+           // marca = e.Parameter as PRODUCTO;
 
             IDDescripcionTB.Text = producto.Descripcion;
             IDNombreTB.Text = nombre.Nombre;
             IDPrecioTB.Text = precio.Precio.ToString();
             IDStockTB.Text = stock.Stock.ToString();
-            IDMarcaTB.Text = marca.IdMarca.ToString();
+           // IDMarcaTB.Text = marca.IdMarca.ToString();
 
         }
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)

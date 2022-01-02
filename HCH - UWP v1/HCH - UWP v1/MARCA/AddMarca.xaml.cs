@@ -37,7 +37,7 @@ namespace HCH___UWP_v1
         {
             var marca = new MARCA()
             {
-                IdMarca = int.Parse(IDMarcaTB.Text),
+               // IdMarca = int.Parse(IDMarcaTB.Text),
                 Descripcion = IDDescripcionTB.Text,
                 Activo = new bool(),
                 FechaRegistro = DateTime.Today
