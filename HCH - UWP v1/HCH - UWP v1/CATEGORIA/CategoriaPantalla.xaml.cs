@@ -86,23 +86,46 @@ namespace HCH___UWP_v1
 
 
 
-    //      private async void Button_Click(object sender, RoutedEventArgs e)
-       //    {
-       //          var httpHandler = new HttpClientHandler();
-       //          var request = new HttpRequestMessage();
-       //          request.RequestUri = new Uri(CATEGORIAUrl);
-       //          request.Method = HttpMethod.Get;
-      //      request.Headers.Add("Accept", "application/json");
-      //      var client = new HttpClient(httpHandler);
+        //      private async void Button_Click(object sender, RoutedEventArgs e)
+        //    {
+        //          var httpHandler = new HttpClientHandler();
+        //          var request = new HttpRequestMessage();
+        //          request.RequestUri = new Uri(CATEGORIAUrl);
+        //          request.Method = HttpMethod.Get;
+        //      request.Headers.Add("Accept", "application/json");
+        //      var client = new HttpClient(httpHandler);
 
-     //        HttpResponseMessage response = await client.SendAsync(request);
-     //       if (response.StatusCode == HttpStatusCode.OK)
-      //      {
-      //          string API1 = await response.Content.ReadAsStringAsync();
-      //          var resultado = JsonConvert.DeserializeObject<List<CATEGORIA>>(API1);
-      //          ListaCategoria.ItemsSource = resultado;
+        //        HttpResponseMessage response = await client.SendAsync(request);
+        //       if (response.StatusCode == HttpStatusCode.OK)
+        //      {
+        //          string API1 = await response.Content.ReadAsStringAsync();
+        //          var resultado = JsonConvert.DeserializeObject<List<CATEGORIA>>(API1);
+        //          ListaCategoria.ItemsSource = resultado;
 
-      //      }
+        //      }
+
+        protected void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddCategoria));
         }
+
+        private void ListaCategoria_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var categoria = ListaCategoria.SelectedItem as CATEGORIA;
+            Frame.Navigate(typeof(EditarCategoria), categoria);
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
+    }
     }
     

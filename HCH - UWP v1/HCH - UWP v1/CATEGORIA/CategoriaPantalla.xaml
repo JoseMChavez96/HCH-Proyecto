@@ -30,28 +30,32 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="40,94,0,0" Text="Categoría" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
-        <ListView x:Name="ListaCategoria" Margin="235,25,-235,117">
-            <ListView.HeaderTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="IDCarrito" Width="  250                                  "/>
-                        <TextBlock Text="IDUsuario" Width="250"/>
-                        <TextBlock Text="IDProducto" Width="250"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
+        <ListBox x:Name="ListaCategoria" Margin="233,103,69,48" SelectionChanged="ListaCategoria_SelectionChanged_1">
+            <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="local1:CATEGORIA">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="ItemIdCarrito" Width="250" Text="{x:Bind IdCategoria}"  />
+                        <TextBlock x:Name="IdCategoria" Width="250" Text="{x:Bind IdCategoria}"  />
                         <TextBlock x:Name="ItemU" Width="250" Text="{x:Bind Descripcion}"  />
                         <TextBlock x:Name="ItemP" Width="250" Text="{x:Bind  Activo}"  />
                         <TextBlock x:Name="ItemPA" Width="250" Text="{x:Bind  FechaRegistro}"  />
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <CommandBar Margin="-10,922,10,0">
+            <AppBarButton Icon="Add" Label="Add nuevo" Click="AppBarButton_Click"/>
+        </CommandBar>
+        <ListView HorizontalAlignment="Left" Height="51" Margin="159,10,0,0" VerticalAlignment="Top" Width="1802" SelectionChanged="ListView_SelectionChanged_1">
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBlock Text="ID" Width="338" />
+                <TextBlock Text="     DESCRIPCION" Width="446" />
+                <TextBlock Text="         ESTADO" Width="437"/>
+                <TextBlock Text="                                     FECHA" Width="413" />
+
+
+            </StackPanel>
         </ListView>
-       
+
 
     </Grid>
 </Page>

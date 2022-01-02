@@ -116,10 +116,10 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AddCategoria.xaml.cs">
+    <Compile Include="CATEGORIA\AddCategoria.xaml.cs">
       <DependentUpon>AddCategoria.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddMarca.xaml.cs">
+    <Compile Include="MARCA\AddMarca.xaml.cs">
       <DependentUpon>AddMarca.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
@@ -128,7 +128,7 @@
     <Compile Include="CarritoPantalla.xaml.cs">
       <DependentUpon>CarritoPantalla.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CategoriaPantalla.xaml.cs">
+    <Compile Include="CATEGORIA\CategoriaPantalla.xaml.cs">
       <DependentUpon>CategoriaPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\CARRITO.cs" />
@@ -144,16 +144,16 @@
     <Compile Include="DetalleCompraPantalla.xaml.cs">
       <DependentUpon>DetalleCompraPantalla.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditarCategoria.xaml.cs">
+    <Compile Include="CATEGORIA\EditarCategoria.xaml.cs">
       <DependentUpon>EditarCategoria.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditarMarca.xaml.cs">
+    <Compile Include="MARCA\EditarMarca.xaml.cs">
       <DependentUpon>EditarMarca.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MarcaPantalla.xaml.cs">
+    <Compile Include="MARCA\MarcaPantalla.xaml.cs">
       <DependentUpon>MarcaPantalla.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProductoPantalla.xaml.cs">
@@ -185,11 +185,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="AddCategoria.xaml">
+    <Page Include="CATEGORIA\AddCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddMarca.xaml">
+    <Page Include="MARCA\AddMarca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,7 +197,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CategoriaPantalla.xaml">
+    <Page Include="CATEGORIA\CategoriaPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,11 +209,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditarCategoria.xaml">
+    <Page Include="CATEGORIA\EditarCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditarMarca.xaml">
+    <Page Include="MARCA\EditarMarca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,7 +221,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="MarcaPantalla.xaml">
+    <Page Include="MARCA\MarcaPantalla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,6 +241,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PRODUCTO\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
