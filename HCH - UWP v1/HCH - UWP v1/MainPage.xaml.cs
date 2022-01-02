@@ -62,5 +62,9 @@ namespace HCH___UWP_v1
             this.Frame.Navigate(typeof(UsuarioPantalla));
         }
 
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

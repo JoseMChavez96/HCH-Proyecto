@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top">
+        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top" Height="136" Width="266">
 
             <Button.Flyout>
 
@@ -25,6 +25,7 @@
             </Button.Flyout>
 
         </Button>
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="750,63,0,0" Text="Danny Huacon y Jose Chavez " TextWrapping="Wrap" VerticalAlignment="Top" Width="193" SelectionChanged="TextBlock_SelectionChanged"/>
 
     </Grid>
 </Page>
