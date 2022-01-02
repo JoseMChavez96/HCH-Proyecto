@@ -13,7 +13,7 @@
             <TextBox x:Name="IDNombreTB"  PlaceholderText="Nombre" Margin="50" Width="430" Height="57"/>
             <TextBox x:Name="IDDescripcionTB" PlaceholderText="Descripcion"  Width="430" Height="57"/>
             <TextBox x:Name="IDPrecioTB"  PlaceholderText="Precio" Margin="50" Width="430" Height="57"/>
-            <TextBox x:Name="IDStockTB" PlaceholderText="Stock"  Width="430" Height="57"/>
+            <TextBox x:Name="IDStockTB" PlaceholderText="Stock"  Width="430" Height="57" TextChanged="IDStockTB_TextChanged"/>
             <TextBox x:Name="IDMarcaTB" PlaceholderText="IDmarca" Margin="50"  Width="430" Height="57" TextChanged="IDMarcaTB_TextChanged"/>
             <TextBox x:Name="IDCategoriaTB" PlaceholderText="IDCategoria"   Width="430" Height="57"/>
         </StackPanel>

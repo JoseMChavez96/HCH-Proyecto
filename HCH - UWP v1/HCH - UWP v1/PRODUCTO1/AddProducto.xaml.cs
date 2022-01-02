@@ -53,9 +53,19 @@ namespace HCH___UWP_v1
 
             HttpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json");
 
-            await client.PostAsync("https://localhost:44399/api/Producto", HttpContent);
+            await client.PostAsync("https://localhost:44399/api/producto", HttpContent);
 
             Frame.GoBack();
+
+        }
+
+        private void IDMarcaTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void IDStockTB_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
         }
     }
