@@ -74,22 +74,35 @@ namespace HCH___UWP_v1
         {
             this.Frame.Navigate(typeof(UsuarioPantalla));
         }
-        private async void Button_Click(object sender, RoutedEventArgs e)
+       protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            var httpHandler = new HttpClientHandler();
-            var request = new HttpRequestMessage();
-            request.RequestUri = new Uri(CATEGORIAUrl);
-            request.Method = HttpMethod.Get;
-            request.Headers.Add("Accept", "application/json");
-            var client = new HttpClient(httpHandler);
+           HttpClient client = new HttpClient();
+            var JsonReponse = await client.GetStringAsync("https://localhost:44399/api/categoria");
+            var CATEGORIAResult = JsonConvert.DeserializeObject<List<CATEGORIA>>(JsonReponse);
+            ListaCategoria.ItemsSource = CATEGORIAResult;
+        }
 
-            HttpResponseMessage response = await client.SendAsync(request);
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                string API1 = await response.Content.ReadAsStringAsync();
-                var resultado = JsonConvert.DeserializeObject<List<CATEGORIA>>(API1);
-                ListaCategoria.ItemsSource = resultado;
-            }
+
+
+
+
+    //      private async void Button_Click(object sender, RoutedEventArgs e)
+       //    {
+       //          var httpHandler = new HttpClientHandler();
+       //          var request = new HttpRequestMessage();
+       //          request.RequestUri = new Uri(CATEGORIAUrl);
+       //          request.Method = HttpMethod.Get;
+      //      request.Headers.Add("Accept", "application/json");
+      //      var client = new HttpClient(httpHandler);
+
+     //        HttpResponseMessage response = await client.SendAsync(request);
+     //       if (response.StatusCode == HttpStatusCode.OK)
+      //      {
+      //          string API1 = await response.Content.ReadAsStringAsync();
+      //          var resultado = JsonConvert.DeserializeObject<List<CATEGORIA>>(API1);
+      //          ListaCategoria.ItemsSource = resultado;
+
+      //      }
         }
     }
-}
+    

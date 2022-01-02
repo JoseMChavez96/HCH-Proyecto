@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Margin="28,10,0,0">
 
 
         <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top">
@@ -30,29 +30,27 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="40,94,0,0" Text="Categoría" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
-        <Button Content="LLAMAR api1" Click="Button_Click" Margin="681,918,0,0" VerticalAlignment="Top"/>
-        <ListView x:Name="ListaCategoria" Margin="176,25,-176,117">
+        <ListView x:Name="ListaCategoria" Margin="235,25,-235,117">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID" Width="  250                                  "/>
-                        <TextBlock Text="Descripcion" Width="250"/>
-                        <TextBlock Text="Estado" Width="250"/>
-                        <TextBlock Text="Fecha de creacion" Width="250"/>
+                        <TextBlock Text="IDCarrito" Width="  250                                  "/>
+                        <TextBlock Text="IDUsuario" Width="250"/>
+                        <TextBlock Text="IDProducto" Width="250"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local1:CATEGORIA">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="ItemIdCategoria" Width="250" Text="{x:Bind IdCategoria}"  />
-                        <TextBlock x:Name="Itemdescripcion" Width="250" Text="{x:Bind Descripcion}"  />
-                        <TextBlock x:Name="ItemActivo" Width="250" Text="{x:Bind  Activo}"  />
-                        <TextBlock x:Name="ItemFechaRegistro" Width="250" Text="{x:Bind FechaRegistro}" />
+                        <TextBlock x:Name="ItemIdCarrito" Width="250" Text="{x:Bind IdCategoria}"  />
+                        <TextBlock x:Name="ItemU" Width="250" Text="{x:Bind Descripcion}"  />
+                        <TextBlock x:Name="ItemP" Width="250" Text="{x:Bind  Activo}"  />
+                        <TextBlock x:Name="ItemPA" Width="250" Text="{x:Bind  FechaRegistro}"  />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+       
     </Grid>
 </Page>

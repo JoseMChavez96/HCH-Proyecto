@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AddCategoria.xaml.cs">
+      <DependentUpon>AddCategoria.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddMarca.xaml.cs">
       <DependentUpon>AddMarca.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,9 @@
     </Compile>
     <Compile Include="DetalleCompraPantalla.xaml.cs">
       <DependentUpon>DetalleCompraPantalla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCategoria.xaml.cs">
+      <DependentUpon>EditarCategoria.xaml</DependentUpon>
     </Compile>
     <Compile Include="EditarMarca.xaml.cs">
       <DependentUpon>EditarMarca.xaml</DependentUpon>
@@ -179,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddCategoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddMarca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DetalleCompraPantalla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditarCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
