@@ -29,7 +29,6 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="14,81,0,0" Text="Marca" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134" RenderTransformOrigin="0.358,0.071"/>
-        <Button Content="Llamar API" Margin="0,866,0,0" VerticalAlignment="Top" Click="Button_Click_1" HorizontalAlignment="Center"/>
         <ListBox x:Name="ListaMarca" Margin="192,41,50,153" SelectionChanged="ListaMarca_SelectionChanged_1">
 
             <ListView>

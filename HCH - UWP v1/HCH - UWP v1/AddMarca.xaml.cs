@@ -38,7 +38,8 @@ namespace HCH___UWP_v1
             var marca = new MARCA()
             {
                 //IdMarca = IDMarcaTB.int,
-                Descripcion = IDDescripcionTB.Text
+                Descripcion = IDDescripcionTB.Text,
+               //echaRegistro = new DateTime()
             };
             var client = new HttpClient();
             var MARCAJson = JsonConvert.SerializeObject(marca);
