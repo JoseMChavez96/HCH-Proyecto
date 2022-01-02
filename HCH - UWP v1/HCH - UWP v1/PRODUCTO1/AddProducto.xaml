@@ -21,6 +21,20 @@
             <AppBarButton Icon="Add" Label="add" Click="AppBarButton_Click_1"/>
             <AppBarButton Icon="Cancel" Label="DCancel" Click="AppBarButton_Click"/>
         </CommandBar>
+        <StackPanel HorizontalAlignment="Left" Height="522" Margin="750,45,0,0" VerticalAlignment="Top" Width="491">
+            <TextBlock Text="NOTA CONSIDERAR: "/>
+            <TextBlock Text="ID MARCA: 1:MCDonalds" Margin="15"/>
+            <TextBlock Text="ID MARCA: 2:KOBE" Margin="15"/>
+            <TextBlock Text="ID MARCA: 3:Hornero" Margin="15"/>
+            <TextBlock Text="ID MARCA: 4:CocaCola" Margin="15"/>
+            <TextBlock Text="ID MARCA: 5:Nacional" Margin="15"/>
+            <TextBlock Text="ID CATEGORIA: 1:Hamburguesas" Margin="15"/>
+            <TextBlock Text="ID CATEGORIA: 2:Bebidas" Margin="15"/>
+            <TextBlock Text="ID CATEGORIA: 3:Pizzas" Margin="15"/>
+            <TextBlock Text="ID CATEGORIA: 4:Sushi" Margin="15"/>
+            <TextBlock Text="ID CATEGORIA: 5:Adicionales" Margin="15"/>
+        </StackPanel>
+
 
     </Grid>
 </Page>
