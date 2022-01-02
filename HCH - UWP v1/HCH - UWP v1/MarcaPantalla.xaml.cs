@@ -113,5 +113,15 @@ namespace HCH___UWP_v1
             var marca = ListaMarca.SelectedItem as MARCA;
             Frame.Navigate(typeof(EditarMarca), marca);
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

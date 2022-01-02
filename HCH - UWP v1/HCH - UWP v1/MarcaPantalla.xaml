@@ -29,18 +29,8 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="14,81,0,0" Text="Marca" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134" RenderTransformOrigin="0.358,0.071"/>
-        <ListBox x:Name="ListaMarca" Margin="192,41,50,153" SelectionChanged="ListaMarca_SelectionChanged_1">
+        <ListBox x:Name="ListaMarca" Margin="159,90,83,104" SelectionChanged="ListaMarca_SelectionChanged_1">
 
-            <ListView>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID" Width="  400 "/>
-                        <TextBlock Text="Descripcion" Width="500"/>
-                        <TextBlock Text="Estado" Width="500"/>
-                        <TextBlock Text="Fecha de creacion" Width="500"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView>
             <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="local1:MARCA">
                     <StackPanel Orientation="Horizontal">
@@ -55,8 +45,16 @@
         <CommandBar Margin="-10,922,10,0">
             <AppBarButton Icon="Add" Label="Add nuevo" Click="AppBarButton_Click"/>
         </CommandBar>
+        <ListView HorizontalAlignment="Left" Height="51" Margin="159,10,0,0" VerticalAlignment="Top" Width="1802" SelectionChanged="ListView_SelectionChanged_1">
+            <StackPanel Orientation="Horizontal" Height="60">
+                <TextBlock Text="ID" Width="338" />
+                <TextBlock Text="     DESCRIPCION" Width="446" />
+                <TextBlock Text="         ESTADO" Width="437"/>
+                <TextBlock Text="                                     FECHA" Width="413" />
 
 
+            </StackPanel>
+        </ListView>
 
 
     </Grid>
