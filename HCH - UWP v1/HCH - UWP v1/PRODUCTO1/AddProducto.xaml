@@ -15,6 +15,8 @@
             <TextBox x:Name="IDDescripcionTB" PlaceholderText="Descripcion" Margin="50"/>
             <TextBox x:Name="IDPrecioTB"  PlaceholderText="Precio" Margin="50"/>
             <TextBox x:Name="IDStockTB" PlaceholderText="Stock" Margin="50"/>
+            <TextBox x:Name="IDMarcaTB" PlaceholderText="IDmarca" Margin="50"/>
+            <TextBox x:Name="IDCategoriaTB" PlaceholderText="IDCategoria" Margin="50"/>
         </StackPanel>
         <CommandBar Margin="-10,950,10,0">
             <AppBarButton Icon="Add" Label="add" Click="AppBarButton_Click_1"/>

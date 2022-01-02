@@ -37,12 +37,14 @@ namespace HCH___UWP_v1
         {
             var producto = new PRODUCTO()
             {
-                IdProducto = (int)Double.Parse(IDProductoTB.Text),
+                IdProducto = int.Parse(IDProductoTB.Text),
                 Nombre = IDNombreTB.Text,
                 Descripcion = IDDescripcionTB.Text,
                 Precio = (int)Double.Parse(IDPrecioTB.Text),
-                Stock = (int)Double.Parse(IDStockTB.Text),
+                Stock = int.Parse(IDStockTB.Text),
                 Activo = new bool(),
+                IdMarca = int.Parse(IDMarcaTB.Text),
+                //  IdCategoria = int.Parse(IDCategoriaTB.Text),
                 FechaRegistro = DateTime.Today
             };
             var client = new HttpClient();

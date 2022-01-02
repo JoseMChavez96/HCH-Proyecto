@@ -40,13 +40,13 @@ namespace HCH___UWP_v1
 
             IDDescripcionTB.Text = producto.Descripcion;
             IDNombreTB.Text = nombre.Nombre;
-            Double.Parse(IDPrecioTB.Text)  = precio.Precio;
+            IDPrecioTB.Text = precio.Precio.ToString();
 
         }
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             var client = new HttpClient();
-            await client.DeleteAsync("https://localhost:44399/api/Producto/" + producto.IdProducto);
+            await client.DeleteAsync("https://localhost:44399/api/producto/" + producto.IdProducto);
             Frame.GoBack();
         }
         private async void AppBarButton_Click_1(object sender, RoutedEventArgs e)
@@ -54,13 +54,15 @@ namespace HCH___UWP_v1
             var client = new HttpClient();
 
             producto.Descripcion = IDDescripcionTB.Text;
+            nombre.Nombre = IDNombreTB.Text;
+            precio.Precio= (int)double.Parse(IDPrecioTB.Text);
             producto.MARCA = null;
             producto.CATEGORIA = null;
             var PRODUCTOJson = JsonConvert.SerializeObject(producto);
             var HttpContent = new StringContent(PRODUCTOJson);
             HttpContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json");
 
-            await client.PutAsync("https://localhost:44399/api/Producto/" + producto.IdProducto, HttpContent);
+            await client.PutAsync("https://localhost:44399/api/producto/" + producto.IdProducto, HttpContent);
             Frame.GoBack();
         }
     }
