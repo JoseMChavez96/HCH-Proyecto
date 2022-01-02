@@ -116,6 +116,12 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PRODUCTO1\EditarProducto.xaml.cs">
+      <DependentUpon>EditarProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTO1\AddProducto.xaml.cs">
+      <DependentUpon>AddProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CATEGORIA\AddCategoria.xaml.cs">
       <DependentUpon>AddCategoria.xaml</DependentUpon>
     </Compile>
@@ -185,6 +191,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="PRODUCTO1\EditarProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PRODUCTO1\AddProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CATEGORIA\AddCategoria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

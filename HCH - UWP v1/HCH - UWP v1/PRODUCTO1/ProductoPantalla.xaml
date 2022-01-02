@@ -27,8 +27,8 @@
             </Button.Flyout>
 
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="15,96,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="99"/>
-        <ListBox x:Name="ListaProducto" Margin="109,111,55,110">
+        <TextBlock HorizontalAlignment="Left" Margin="15,96,0,0" Text="Producto" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="99" RenderTransformOrigin="0.358,0.071"/>
+        <ListBox x:Name="ListaProducto" Margin="109,116,10,105" SelectionChanged="ListaMarca_SelectionChanged_1">
             <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="local1:PRODUCTO">
                     <StackPanel Orientation="Horizontal">
@@ -38,14 +38,17 @@
                         <TextBlock x:Name="ItemIdMarca" Width="200" Text="{x:Bind IdMarca}" />
                         <TextBlock x:Name="ItemIdCategoria" Width="200" Text="{x:Bind IdCategoria}" />
                         <TextBlock x:Name="ItemStock" Width="200" Text="{x:Bind Stock}" />
+                        <TextBlock x:Name="ItemPrecio" Width="200" Text="{x:Bind Precio}" />
                         <TextBlock x:Name="ItemActivo" Width="200" Text="{x:Bind Activo}" />
                         <TextBlock x:Name="ItemFechaRegistro" Width="200" Text="{x:Bind FechaRegistro}" />
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
-        <ListView HorizontalAlignment="Left" Height="51" Margin="109,60,0,0" VerticalAlignment="Top" Width="1802">
+        <CommandBar Margin="-10,922,10,0">
+            <AppBarButton Icon="Add" Label="Add nuevo" Click="AppBarButton_Click"/>
+        </CommandBar>
+        <ListView HorizontalAlignment="Left" Height="51" Margin="109,60,0,0" VerticalAlignment="Top" Width="1802" SelectionChanged="ListView_SelectionChanged_1" >
             <StackPanel Orientation="Horizontal" Height="60">
                 <TextBlock Text="ID" Width="  200                                  "/>
                 <TextBlock Text="Nombre" Width="200"/>
@@ -53,6 +56,7 @@
                 <TextBlock Text="IdMarca" Width="200"/>
                 <TextBlock Text="IdCategoria" Width="200"/>
                 <TextBlock Text="Stock" Width="200"/>
+                <TextBlock Text="Precio" Width="200"/>
                 <TextBlock Text="Activo" Width="200"/>
                 <TextBlock Text="FechaRegistro" Width="200"/>
 

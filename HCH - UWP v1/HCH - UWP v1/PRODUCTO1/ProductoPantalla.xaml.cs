@@ -80,6 +80,41 @@ namespace HCH___UWP_v1
         }
 
 
-     }
-    }
+        protected void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddProducto));
+        }
 
+        private void ListaMarca_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var producto = ListaProducto.SelectedItem as PRODUCTO;
+            Frame.Navigate(typeof(EditarProducto), producto);
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
