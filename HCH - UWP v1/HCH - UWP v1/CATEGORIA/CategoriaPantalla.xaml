@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="HCH___UWP_v1.CategoriaPantalla"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HCH___UWP_v1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:HCH___UWP_v1.Classes"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="28,10,0,0">
+
+
+        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top">
+
+            <Button.Flyout>
+
+                <MenuFlyout>
+                    <MenuFlyoutItem x:Name="MainPageFO" Text="Regresar a menú principal" Click="MainPageFO_Click"/>
+                    <MenuFlyoutSeparator/>
+                    <MenuFlyoutItem x:Name="CarritoFO" Text="Carrito" Click="CarritoFO_Click"/>
+                    <!--<MenuFlyoutItem x:Name="CategoriaFO" Text="Categoría" Click="CategoriaFO_Click"/>-->
+                    <MenuFlyoutItem x:Name="CompraFO" Text="Compra" Click="CompraFO_Click"/>
+                    <MenuFlyoutItem x:Name="DetalleCompraFO" Text="Detalle Compra" Click="DetalleCompraFO_Click"/>
+                    <MenuFlyoutItem x:Name="MarcaFO" Text="Marca" Click="MarcaFO_Click"/>
+                    <MenuFlyoutItem x:Name="ProductoFO" Text="Producto" Click="ProductoFO_Click"/>
+                    <MenuFlyoutItem x:Name="UsuarioFO" Text="Usuario" Click="UsuarioFO_Click"/>
+                </MenuFlyout>
+            </Button.Flyout>
+
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="40,94,0,0" Text="Categoría" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134"/>
+        <ListView x:Name="ListaCategoria" Margin="235,25,-235,117">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="IDCarrito" Width="  250                                  "/>
+                        <TextBlock Text="IDUsuario" Width="250"/>
+                        <TextBlock Text="IDProducto" Width="250"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local1:CATEGORIA">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="ItemIdCarrito" Width="250" Text="{x:Bind IdCategoria}"  />
+                        <TextBlock x:Name="ItemU" Width="250" Text="{x:Bind Descripcion}"  />
+                        <TextBlock x:Name="ItemP" Width="250" Text="{x:Bind  Activo}"  />
+                        <TextBlock x:Name="ItemPA" Width="250" Text="{x:Bind  FechaRegistro}"  />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+       
+
+    </Grid>
+</Page>
