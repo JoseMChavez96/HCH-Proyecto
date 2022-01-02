@@ -39,8 +39,8 @@ namespace HCH___UWP_v1
             {
                // IdMarca = int.Parse(IDMarcaTB.Text),
                 Descripcion = IDDescripcionTB.Text,
-                Activo = new bool(),
-                FechaRegistro = DateTime.Today
+                Activo = true,
+                FechaRegistro = DateTime.Now
             };
             var client = new HttpClient();
             var MARCAJson = JsonConvert.SerializeObject(marca);

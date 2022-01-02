@@ -10,7 +10,6 @@
 
     <Grid>
         <StackPanel>
-            <TextBox x:Name="IDCategoriaTB" PlaceholderText="ID" Margin="50"/>
             <TextBox x:Name="IDDescripcionTB"  PlaceholderText="Descripcion " Margin="50"/>
         </StackPanel>
         <CommandBar Margin="-10,950,10,0">

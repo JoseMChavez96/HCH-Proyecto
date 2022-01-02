@@ -42,10 +42,10 @@ namespace HCH___UWP_v1
                 Descripcion = IDDescripcionTB.Text,
                 Precio = (int)Double.Parse(IDPrecioTB.Text),
                 Stock = int.Parse(IDStockTB.Text),
-                Activo = new bool(),
+                Activo = true,
                 IdMarca = int.Parse(IDMarcaTB.Text),
-                //  IdCategoria = int.Parse(IDCategoriaTB.Text),
-                FechaRegistro = DateTime.Today
+                  IdCategoria = int.Parse(IDCategoriaTB.Text),
+                FechaRegistro = DateTime.Now
             };
             var client = new HttpClient();
             var PRODUCTOJson = JsonConvert.SerializeObject(producto);

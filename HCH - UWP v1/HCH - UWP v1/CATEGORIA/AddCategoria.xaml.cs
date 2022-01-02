@@ -25,6 +25,7 @@ namespace HCH___UWP_v1
     /// </summary>
     public sealed partial class AddCategoria : Page
     {
+ 
         public AddCategoria()
         {
             this.InitializeComponent();
@@ -36,11 +37,16 @@ namespace HCH___UWP_v1
         private async void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
             var categoria = new CATEGORIA()
+           
             {
-                IdCategoria = (int)Double.Parse(IDCategoriaTB.Text),
+                 
+            // IdCategoria = (int)Double.Parse(IDCategoriaTB.Text),
+            FechaRegistro = DateTime.Now,
                 Descripcion = IDDescripcionTB.Text,
-                Activo = new bool(),
-                FechaRegistro = DateTime.Today
+                Activo = true
+
+
+                
             };
             var client = new HttpClient();
             var CATEGORIAJson = JsonConvert.SerializeObject(categoria);

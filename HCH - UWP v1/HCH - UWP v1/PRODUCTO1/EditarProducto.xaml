@@ -9,12 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel>
-            <TextBox x:Name="IDNombreTB"  PlaceholderText="Nombre" Margin="50"/>
-            <TextBox x:Name="IDDescripcionTB" PlaceholderText="Descripcion" Margin="50"/>
-            <TextBox x:Name="IDPrecioTB"  PlaceholderText="Precio" Margin="50"/>
-            <TextBox x:Name="IDStockTB" PlaceholderText="Stock" Margin="50"/>
-            <TextBox x:Name="IDMarcaTB" PlaceholderText="IDmarca" Margin="50"/>
+        <StackPanel HorizontalAlignment="Left">
+            <TextBox x:Name="IDNombreTB"  PlaceholderText="Nombre" Margin="50" Width="430" Height="57"/>
+            <TextBox x:Name="IDDescripcionTB" PlaceholderText="Descripcion"  Width="430" Height="57"/>
+            <TextBox x:Name="IDPrecioTB"  PlaceholderText="Precio" Margin="50" Width="430" Height="57"/>
+            <TextBox x:Name="IDStockTB" PlaceholderText="Stock"  Width="430" Height="57"/>
+   
         </StackPanel>
         <CommandBar Margin="-10,950,10,0">
             <AppBarButton Icon="Accept" Label="Update"  Click="AppBarButton_Click_1"/>
