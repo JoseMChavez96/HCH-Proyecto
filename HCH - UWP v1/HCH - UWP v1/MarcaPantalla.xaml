@@ -29,19 +29,20 @@
 
         </Button>
         <TextBlock HorizontalAlignment="Left" Margin="14,81,0,0" Text="Marca" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="134" RenderTransformOrigin="0.358,0.071"/>
-        <Button Content="Llamar API" Margin="688,920,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <ListView x:Name="ListaMarca" Margin="232,25,10,169">
-            <ListView.HeaderTemplate>
+        <Button Content="Llamar API" Margin="0,866,0,0" VerticalAlignment="Top" Click="Button_Click_1" HorizontalAlignment="Center"/>
+        <ListBox x:Name="ListaMarca" Margin="192,41,50,153" SelectionChanged="ListaMarca_SelectionChanged_1">
+
+            <ListView>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="ID" Width="  400                                  "/>
+                        <TextBlock Text="ID" Width="  400 "/>
                         <TextBlock Text="Descripcion" Width="500"/>
                         <TextBlock Text="Estado" Width="500"/>
                         <TextBlock Text="Fecha de creacion" Width="500"/>
                     </StackPanel>
                 </DataTemplate>
-            </ListView.HeaderTemplate>
-            <ListView.ItemTemplate>
+            </ListView>
+            <ListBox.ItemTemplate>
                 <DataTemplate x:DataType="local1:MARCA">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock x:Name="ItemIdMarca" Width="400" Text="{x:Bind IdMarca}"  />
@@ -50,8 +51,12 @@
                         <TextBlock x:Name="ItemFechaRegistro" Width="500" Text="{x:Bind FechaRegistro}" />
                     </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <CommandBar Margin="-10,922,10,0">
+            <AppBarButton Icon="Add" Label="Add nuevo" Click="AppBarButton_Click"/>
+        </CommandBar>
+
 
 
 

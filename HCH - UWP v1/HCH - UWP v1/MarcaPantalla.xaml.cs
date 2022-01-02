@@ -73,20 +73,36 @@ namespace HCH___UWP_v1
         }
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var httpHandler = new HttpClientHandler();
-            var request = new HttpRequestMessage();
-            request.RequestUri = new Uri(MARCAUrl);
-            request.Method = HttpMethod.Get;
-            request.Headers.Add("Accept", "application/json");
-            var client = new HttpClient(httpHandler);
+            //   var httpHandler = new HttpClientHandler();
+            //   var request = new HttpRequestMessage();
+            //   request.RequestUri = new Uri(MARCAUrl);
+            //   request.Method = HttpMethod.Get;
+            //  request.Headers.Add("Accept", "application/json");
+            //  var client = new HttpClient(httpHandler);
 
-            HttpResponseMessage response = await client.SendAsync(request);
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                string API1 = await response.Content.ReadAsStringAsync();
-                var resultado = JsonConvert.DeserializeObject<List<MARCA>>(API1);
-                ListaMarca.ItemsSource = resultado;
-            }
+            //   HttpResponseMessage response = await client.SendAsync(request);
+            //   if (response.StatusCode == HttpStatusCode.OK)
+            //   {
+            //      string API1 = await response.Content.ReadAsStringAsync();
+            //       var resultado = JsonConvert.DeserializeObject<List<MARCA>>(API1);
+            //       ListaMarca.ItemsSource = resultado;
+            //    }
+
+            HttpClient client = new HttpClient();
+            var JsonReponse = await client.GetStringAsync("https://localhost:44399/api/Marca");
+            var MARCAResult = JsonConvert.DeserializeObject<List<MARCA>>(JsonReponse);
+            ListaMarca.ItemsSource = MARCAResult;
+
+        }
+        protected void AppBarButton_Click(object  sender,  RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddMarca));
+        }
+
+        private void ListaMarca_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var marca = ListaMarca.SelectedItem as MARCA;
+            Frame.Navigate(typeof(EditarMarca), marca);
         }
     }
 }
