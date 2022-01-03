@@ -9,13 +9,13 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top" Height="136" Width="266">
+        <Button Margin="40,40,0,0" VerticalAlignment="Top">
+            <SymbolIcon Symbol="GlobalNavigationButton"/>
 
             <Button.Flyout>
 
                 <MenuFlyout>
                     <MenuFlyoutItem x:Name="CategoriaFO" Text="Categoría" Click="CategoriaFO_Click"/>
-
                     <MenuFlyoutItem x:Name="MarcaFO" Text="Marca" Click="MarcaFO_Click"/>
                     <MenuFlyoutItem x:Name="ProductoFO" Text="Producto" Click="ProductoFO_Click"/>
                     <MenuFlyoutItem x:Name="UsuarioFO" Text="Usuario" Click="UsuarioFO_Click"/>

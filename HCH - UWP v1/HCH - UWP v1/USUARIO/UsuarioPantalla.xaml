@@ -10,7 +10,8 @@
 
     <Grid>
 
-        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top">
+        <Button Margin="40,40,0,0" VerticalAlignment="Top">
+            <SymbolIcon Symbol="GlobalNavigationButton"/>
 
             <Button.Flyout>
 

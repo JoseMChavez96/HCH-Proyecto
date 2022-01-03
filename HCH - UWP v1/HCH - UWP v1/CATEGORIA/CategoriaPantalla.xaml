@@ -11,10 +11,10 @@
     <Grid Margin="28,10,0,0">
 
 
-        <Button Content="Menús" Margin="40,40,0,0" VerticalAlignment="Top">
-
+        
+        <Button Margin="40,40,0,0" VerticalAlignment="Top">
+            <SymbolIcon Symbol="GlobalNavigationButton"/>
             <Button.Flyout>
-
                 <MenuFlyout>
                     <MenuFlyoutItem x:Name="MainPageFO" Text="Regresar a menú principal" Click="MainPageFO_Click"/>
                     <MenuFlyoutSeparator/>
