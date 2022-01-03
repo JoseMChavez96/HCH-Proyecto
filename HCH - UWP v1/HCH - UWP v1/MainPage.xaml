@@ -23,7 +23,10 @@
             </Button.Flyout>
 
         </Button>
-        <TextBlock HorizontalAlignment="Left" Height="36" Margin="750,63,0,0" Text="Danny Huacon y Jose Chavez " TextWrapping="Wrap" VerticalAlignment="Top" Width="193" SelectionChanged="TextBlock_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="1662,928,0,0" Text="Por: Danny Huacón y José Chavez " TextWrapping="Wrap" VerticalAlignment="Top" Width="222" SelectionChanged="TextBlock_SelectionChanged"/>
+        <Image Source="Assets/HCH-Splash-01.png" Stretch="Fill" HorizontalAlignment="Center" Height="580" VerticalAlignment="Center" Width="1276"/>
+
+
 
     </Grid>
 </Page>
